@@ -1,0 +1,93 @@
+<div>
+  <button
+    *ngFor="let item of operators"
+    [routerLink]="['/', 'operators', item.link]"
+    type="button"
+    class="btn btn-outline-secondary"
+  >
+    {{ item.name }}
+  </button>
+</div>
+<h2>Operators</h2>
+
+<p>
+  Operators are functions that can be applied to observables to modify their
+  behavior. There are many different types of operators, each with its own
+  specific purpose. Some common operators include:
+</p>
+<ul>
+  <li>
+    <p>
+      Creation operators: These operators create new observables from existing
+      data sources. For example, the from operator can be used to create an
+      observable from an array of values, and the of operator can be used to
+      create an observable from a single value. eg:
+      from(),of(),interval(),timer()
+    </p>
+  </li>
+  <li>
+    <p>
+      Transformation operators: These operators modify the values emitted by an
+      observable. For example, the map operator can be used to transform each
+      value in an observable by applying a function to it, and the filter
+      operator can be used to filter out values that do not meet a certain
+      criteria. eg. map(),filter(),reduce()
+    </p>
+  </li>
+  <li>
+    <p>
+      Action operators: These operators perform actions when an observable emits
+      a value. For example, the tap operator can be used to log each value that
+      is emitted by an observable, and the do operator can be used to execute a
+      function when an observable emits a value. eg tap(),do(),subscribeOn()
+    </p>
+  </li>
+  <li>
+    <p>
+      Error handling operators: These operators handle errors that occur in an
+      observable. For example, the catch operator can be used to handle errors
+      by executing a function when an error is emitted, and the retry operator
+      can be used to retry an observable if it emits an error. eg.
+      catch(),retry(),retryWhen(),catchError()
+    </p>
+  </li>
+  <li>
+    <p>
+      Combination operators: These operators combine multiple observables into a
+      single observable. For example, the concat operator can be used to combine
+      two observables into a single observable that emits the values from both
+      observables in order, and the forkJoin operator can be used to combine the
+      results of multiple observables into a single observable.
+    </p>
+  </li>
+</ul>
+
+RxJS provides a wide variety of operators, and there are many more that are not
+listed here. Operators can be used to create powerful and efficient asynchronous
+code.
+
+<!-- <p>
+  Creation operators: from(): Creates an observable from an array of values.
+  of(): Creates an observable from a single value. interval(): Creates an
+  observable that emits a value at a regular interval. timer(): Creates an
+  observable that emits a value after a certain amount of time. Transformation
+  operators: map(): Transforms each value in an observable by applying a
+  function to it. filter(): Filters out values that do not meet a certain
+  criteria. scan(): Applies a function to each value in an observable and
+  accumulates the results. reduce(): Reduces the values in an observable to a
+  single value by applying a function. Action operators: tap(): Performs an
+  action when an observable emits a value. do(): Executes a function when an
+  observable emits a value. subscribeOn(): Specifies the scheduler on which an
+  observable is subscribed. publish(): Creates a new observable that shares the
+  subscription of an existing observable. Error handling operators: catch():
+  Handles errors by executing a function when an error is emitted. retry():
+  Retries an observable if it emits an error. retryWhen(): Retries an observable
+  by applying a function to the errors. catchError(): Handles errors by creating
+  a new observable that emits the results of a function. Combination operators:
+  concat(): Combines two observables into a single observable that emits the
+  values from both observables in order. forkJoin(): Combines the results of
+  multiple observables into a single observable. merge(): Combines two
+  observables into a single observable that emits the values from both
+  observables at the same time. zip(): Combines two observables into a single
+  observable that emits pairs of values from the two observables.
+</p> -->

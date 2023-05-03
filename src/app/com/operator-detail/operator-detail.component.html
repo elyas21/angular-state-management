@@ -1,0 +1,35 @@
+<div>
+  <button
+    *ngFor="let item of operators"
+    [routerLink]="['/', 'operators', item.link]"
+    type="button"
+    class="btn btn-outline-secondary"
+  >
+    {{ item.name }}
+  </button>
+</div>
+
+<ng-container *ngIf="op">
+    <h1>{{op.name}}</h1>
+    <p>
+        {{op.description}}
+    </p>
+    <div>
+        <div class="d-flex justify-content-center">
+            <ngx-codejar
+              class="col-8"
+              [highlightMethod]="hightlightMethod"
+              [(code)]="op.code"
+              [highlighter]="'prism'"
+              [showLineNumbers]="true"
+            ></ngx-codejar>
+          </div>
+          
+    </div>
+    <div>
+        <p>
+            {{op.codeDescription}}
+        </p>
+    </div>
+</ng-container>
+

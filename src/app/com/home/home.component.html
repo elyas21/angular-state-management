@@ -1,0 +1,72 @@
+<p>
+  Asynchronous programming is a way of writing code that can handle events that
+  happen at different times. In JavaScript, asynchronous code is often used to
+  handle user input, network requests, and other events that happen outside of
+  the main thread of execution.
+</p>
+<p>
+  Angular is a web development framework that uses asynchronous programming
+  extensively. For example, when you make a request to an API using Angular's
+  HttpClient service, the request is made asynchronously. This means that the
+  code that makes the request does not block the main thread of execution, which
+  allows the user interface to remain responsive.
+</p>
+<p>
+  There are a number of different ways to write asynchronous code in JavaScript.
+  One common approach is to use callbacks. Callbacks are functions that are
+  passed as arguments to other functions. When the function that the callback is
+  passed to is called, it will call the callback function when it is finished.
+</p>
+<p>
+  Another common approach to asynchronous programming is to use promises.
+  Promises are objects that represent the outcome of an asynchronous operation.
+  When an asynchronous operation is completed, the promise will be resolved with
+  the result of the operation. If the operation fails, the promise will be
+  rejected with an error.
+</p>
+
+<h3>Callbacks</h3>
+<p>
+  A callback is a function that is passed as an argument to another function.
+  The callback function is called when the other function is finished executing.
+  For example, the following code uses a callback to print the result of a
+  calculation:
+</p>
+<div class="d-flex justify-content-center">
+  <ngx-codejar
+    class="col-8"
+    [highlightMethod]="hightlightMethod"
+    [(code)]="varSer.callbackCode"
+    [highlighter]="'prism'"
+    [showLineNumbers]="true"
+  ></ngx-codejar>
+</div>
+<h3>Promise</h3>
+<p>
+    A promise is an object that represents the outcome of an asynchronous operation. When an asynchronous operation is completed, the promise will be resolved with the result of the operation. If the operation fails, the promise will be rejected with an error.
+
+    For example, the following code uses a promise to make a request to an API:
+</p>
+<div class="d-flex justify-content-center">
+  <ngx-codejar
+    class="col-8"
+    [highlightMethod]="hightlightMethod"
+    [(code)]="varSer.promiseCode"
+    [highlighter]="'prism'"
+    [showLineNumbers]="true"
+  ></ngx-codejar>
+</div>
+<h3>Observable</h3>
+<p>
+    An observable is an object that represents a stream of data. Observables are similar to promises, but they can emit multiple values over time.
+    For example, the following code uses an observable to listen for changes to the value of an input element:
+</p>
+<div class="d-flex justify-content-center">
+  <ngx-codejar
+    class="col-8"
+    [highlightMethod]="hightlightMethod"
+    [(code)]="varSer.observableCode"
+    [highlighter]="'prism'"
+    [showLineNumbers]="true"
+  ></ngx-codejar>
+</div>
