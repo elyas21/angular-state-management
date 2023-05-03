@@ -14,7 +14,14 @@ export class OperatorsComponent {
     public varSer: GetVariablesService
   ) {}
 
-  operators = [{ name: 'map' ,link:'map'}];
+  operators = [
+    { name: 'map', link: 'map' },
+    { name: 'filter', link: 'filter' },
+    { name: 'take', link: 'take' },
+    { name: 'switchMap', link: 'switchMap' },
+    { name: 'tap', link: 'tap' },
+    { name: 'combineLatest', link: 'combineLatest' },
+  ];
   ngOnInit(): void {
     this._dataSer
       .getCommentsFromApi()
