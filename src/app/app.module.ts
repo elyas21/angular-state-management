@@ -18,6 +18,8 @@ import { TakeComponent } from './com/demo/take/take.component';
 import { SwitchMapComponent } from './com/demo/switch-map/switch-map.component';
 import { TapComponent } from './com/demo/tap/tap.component';
 import { CombineLatestComponent } from './com/demo/combine-latest/combine-latest.component';
+import { DemoComponent } from './com/demo/demo.component';
+import { ObservableDemoComponent } from './com/demo/observable-demo/observable-demo.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { CombineLatestComponent } from './com/demo/combine-latest/combine-latest
     TakeComponent,
     SwitchMapComponent,
     TapComponent,
-    CombineLatestComponent
+    CombineLatestComponent,
+    DemoComponent,
+    ObservableDemoComponent
   ],
   imports: [
     BrowserModule,

@@ -1,1 +1,12 @@
-<p>filter works!</p>
+<h1>filter</h1>
+
+<div class="d-flex flex-row justify-content-around">
+  <div>
+    <h4>All Numbers</h4>
+    <p>{{ allNumbersObservable | async | json }}</p>
+  </div>
+  <div>
+    <h4>Even numbers</h4>
+    <p>{{ evenNumbers | json }}</p>
+  </div>
+</div>

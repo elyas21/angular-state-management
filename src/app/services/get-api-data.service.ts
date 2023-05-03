@@ -8,8 +8,11 @@ import { Observable } from 'rxjs';
 export class GetApiDataService {
   constructor(private _http: HttpClient) {}
 
-  getUserFromApi() {
+  getUsersFromApi() {
     return this._http.get('https://jsonplaceholder.typicode.com/users');
+  }
+  getUserFromApi(userId:string) {
+    return this._http.get('https://jsonplaceholder.typicode.com/users/'+userId);
   }
 
   getCommentsFromApi(): Observable<any> {

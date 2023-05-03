@@ -16,7 +16,7 @@ export class ObservableComponent implements OnInit {
   constructor(private _dataSer: GetApiDataService, public varSer: GetVariablesService) {}
 
   ngOnInit(): void {
-    this._dataSer.getUserFromApi().subscribe(res=>{
+    this._dataSer.getUserFromApi('1').subscribe(res=>{
       console.log(res);
       
     })

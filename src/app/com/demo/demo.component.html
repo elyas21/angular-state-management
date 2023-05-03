@@ -1,0 +1,4 @@
+<div class="btn-group" role="group" aria-label="Basic example">
+    <button *ngFor="let item of demo"  [routerLink]="['/','demo',item]" type="button" class="btn btn-secondary">{{item}}</button>
+  </div>
+<router-outlet></router-outlet>
