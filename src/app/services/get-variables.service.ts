@@ -40,7 +40,7 @@ export class GetVariablesService {
   function getUsers() {
     const promise = new Promise((resolve, reject) => {
       // Make a request to the API
-      fetch('https://api.example.com/users')
+      fetch('https://jsonplaceholder.typicode.com/users')
         .then(response => response.json())
         .then(users => resolve(users))
         .catch(error => reject(error));
