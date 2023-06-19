@@ -23,15 +23,16 @@ export class SwitchMapComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.getUsers()
-      .pipe(
-        switchMap((users: any) => {
-          this.allUsers = users;
-          return this.getUserDetails(users[0].id);
-        })
-      )
+    this.getUsers().
+    pipe(
+      switchMap((users:any)=>{
+
+        return this.getUserDetails(users[3].id)
+      })
+
+    )
       .subscribe((user) => {
-        this.firstUser = user;
+       
         console.log(user);
       });
   }

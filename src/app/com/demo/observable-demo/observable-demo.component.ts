@@ -7,11 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./observable-demo.component.scss'],
 })
 export class ObservableDemoComponent implements OnInit {
-  observable = new Observable((subscriber) => {
-    subscriber.next({ name: 'Abebe', age: 24, sex: 'Male' });
-  });
+  observable$ : Observable<any> | undefined 
 
   ngOnInit(): void {
+    this.observable$ =  new Observable((subscriber) => {
     
+      subscriber.next({ name: 'Abebe', age: 24, sex: 'Male' });
+
+      
+    });
   }
 }

@@ -12,6 +12,7 @@ import { SwitchMapComponent } from './com/demo/switch-map/switch-map.component';
 import { CombineLatestComponent } from './com/demo/combine-latest/combine-latest.component';
 import { TapComponent } from './com/demo/tap/tap.component';
 import { ObservableDemoComponent } from './com/demo/observable-demo/observable-demo.component';
+import { ParamMapComponent } from './com/routeService/param-map/param-map.component';
 
 const routes: Routes = [
   {
@@ -44,6 +45,7 @@ const routes: Routes = [
       { path: 'tap', component: TapComponent },
     ],
   },
+  { path: 'param-map', component: ParamMapComponent },
 ];
 
 @NgModule({

@@ -42,7 +42,7 @@ export class GetVariablesService {
       // Make a request to the API
       fetch('https://jsonplaceholder.typicode.com/users')
         .then(response => response.json())
-        .then(users => resolve(users))
+        .then(users => {console.log(users); setInterval(()=>{resolve(users)},6000) })
         .catch(error => reject(error));
     });
   

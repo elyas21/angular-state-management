@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NavComponent } from './core/nav/nav.component';
 import { ObservableComponent } from './com/observable/observable.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgxCodejarModule } from 'ngx-codejar';
 import { OperatorsComponent } from './com/operators/operators.component';
 import { HomeComponent } from './com/home/home.component';
@@ -20,6 +20,7 @@ import { TapComponent } from './com/demo/tap/tap.component';
 import { CombineLatestComponent } from './com/demo/combine-latest/combine-latest.component';
 import { DemoComponent } from './com/demo/demo.component';
 import { ObservableDemoComponent } from './com/demo/observable-demo/observable-demo.component';
+import { ParamMapComponent } from './com/routeService/param-map/param-map.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { ObservableDemoComponent } from './com/demo/observable-demo/observable-d
     TapComponent,
     CombineLatestComponent,
     DemoComponent,
-    ObservableDemoComponent
+    ObservableDemoComponent,
+    ParamMapComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,7 +46,8 @@ import { ObservableDemoComponent } from './com/demo/observable-demo/observable-d
     NgbModule,
     NgxCodejarModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

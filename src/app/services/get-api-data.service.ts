@@ -8,14 +8,41 @@ import { Observable } from 'rxjs';
 export class GetApiDataService {
   constructor(private _http: HttpClient) {}
 
-  getUsersFromApi() {
+  getUsersFromApi():Observable<any> {
     return this._http.get('https://jsonplaceholder.typicode.com/users');
   }
-  getUserFromApi(userId:string) {
-    return this._http.get('https://jsonplaceholder.typicode.com/users/'+userId);
+  user: User = { name: 'abebe' };
+
+  getUserFromVar(): User {
+    return this.user;
   }
 
+  sum(x:number, y:number):number {
+    return x+y
+  }
+
+
+
+
+
+
+  getUserFromApi(userId: string):Observable<any> {
+    return this._http.get(
+      'https://jsonplaceholder.typicode.com/users/' + userId
+    );
+  }
+
+
+
+
+
+
+  
   getCommentsFromApi(): Observable<any> {
     return this._http.get('https://jsonplaceholder.typicode.com/comments');
   }
+}
+
+export interface User {
+  name: string;
 }
