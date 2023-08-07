@@ -46,6 +46,13 @@ const routes: Routes = [
     ],
   },
   { path: 'param-map', component: ParamMapComponent },
+  {
+    path: 'declarative',
+    loadChildren: () =>
+      import('./com/declarative/declarative.module').then(
+        (m) => m.DeclarativeModule
+      ),
+  },
 ];
 
 @NgModule({

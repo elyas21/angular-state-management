@@ -9,19 +9,19 @@ import { Observable, combineLatest } from 'rxjs';
 })
 export class CombineLatestComponent implements OnInit {
   constructor(private httpclient: HttpClient) {}
+  sentence: string = '';
 
-  getUsers(): Observable<any> {
-    return this.httpclient.get('https://jsonplaceholder.typicode.com/users');
+  getUser(): Observable<any> {
+    return this.httpclient.get('https://jsonplaceholder.typicode.com/users/1');
   }
 
   getTodos(): Observable<any> {
-    return this.httpclient.get('https://jsonplaceholder.typicode.com/todos');
+    return this.httpclient.get('https://jsonplaceholder.typicode.com/todos/1');
   }
 
   ngOnInit() {
-    combineLatest(this.getUsers(),this.getTodos()).subscribe(res=>{
-      console.log(res);
-      
-    })
+   combineLatest(this.getUser(), this.getTodos()).subscribe((res:Array<any>)=>{
+      this.sentence = '\n' + res[0].name + ' is doing ' + res[1].title
+   })
   }
 }

@@ -38,7 +38,7 @@ import { ParamMapComponent } from './com/routeService/param-map/param-map.compon
     CombineLatestComponent,
     DemoComponent,
     ObservableDemoComponent,
-    ParamMapComponent,
+    ParamMapComponent
   ],
   imports: [
     BrowserModule,
